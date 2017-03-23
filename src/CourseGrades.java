@@ -1,7 +1,5 @@
 
-
 public class CourseGrades {
-
 	public static void main(String[] args) {
 		GradedActivity[] grades = new GradedActivity[4];
 		
@@ -18,13 +16,20 @@ public class CourseGrades {
 	                "score " + grades[i].getScore() +
 	                ", grade " + grades[i].getGrade());
 	  }
+	  
+	  setLab(grades[0]);
 	}
-  /*
-	public void setLab(){}
+
+	public static void setLab(GradedActivity g1)
+	{
+		System.out.println("G1: " + g1);
+	}
 	public void setPassFailExam(){}
 	public void setEssay(){}
 	public void setFinalExam(){}
-	// Method toString()
+	
+/*	
+	  // Method toString()
 	public String toString(){
 		return grades[0].getScore() + grades[0].getGrade() +"\n"+
 	         grades[1].getScore() + grades[1].getGrade() +"\n"+
@@ -33,6 +38,5 @@ public class CourseGrades {
 	}
 }
 	*/
-
 
 }

@@ -15,8 +15,8 @@ public class GradedActivity
    public GradedActivity(){
 	   score = 77.3;
    }
-   public GradedActivity(GradedActivity g1){
-	   
+   public GradedActivity(double s){
+	   score = s;
    }
    
    public void setScore(double s)
