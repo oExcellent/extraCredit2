@@ -1,42 +1,89 @@
+/**
+   The CourseGrades class stores data about a course's 
+   graded activities for the Course Grades programming 
+   challenge.
+*/
 
-public class CourseGrades {
-	public static void main(String[] args) {
-		GradedActivity[] grades = new GradedActivity[4];
-		
-		grades[0] = new GradedActivity();
-		grades[0].setScore(95);
-		grades[1] = new PassFailExam(10, 1, 70);
-		grades[2] = new Essay(30,20,20,30);
-		grades[3] = new FinalExam(50, 7);
-		
-	  // Display the grades.
-	  for (int i = 0; i < grades.length; i++)
-	  {
-	     System.out.println("Grades " + (i + 1) + ": " +
-	                "score " + grades[i].getScore() +
-	                ", grade " + grades[i].getGrade());
-	  }
-	  
-	  setLab(grades[0]);
-	}
+public class CourseGrades
+{
+   // Constant for the number of grades
+   public final int NUM_GRADES = 4;
+   
+   // Variable to reference a GradedActivity
+   // array
+   private GradedActivity[] grades;
+   
+   /**
+      Constructor
+   */
+      
+   public CourseGrades()
+   {
+      // Create the grades array.
+      grades = new GradedActivity[NUM_GRADES];
+   }
+   
+   /**
+      The setLab method stores a GradedActivity object
+      for the lab grade.
+      @param aLab Represents the lab grade.
+   */
+   
+   public void setLab(GradedActivity aLab)
+   {
+      grades[0] = aLab;
+   }
+   
+   /**
+      The setPassFailExam method stores a PassFailExam object
+      for the pass/fail exam grade.
+      @param aPassFailExam Represents the pass/fail exam grade.
+   */
+   
+   public void setPassFailExam(PassFailExam aPassFailExam)
+   {
+      grades[1] = aPassFailExam;
+   }
 
-	public static void setLab(GradedActivity g1)
-	{
-		System.out.println("G1: " + g1);
-	}
-	public void setPassFailExam(){}
-	public void setEssay(){}
-	public void setFinalExam(){}
-	
-/*	
-	  // Method toString()
-	public String toString(){
-		return grades[0].getScore() + grades[0].getGrade() +"\n"+
-	         grades[1].getScore() + grades[1].getGrade() +"\n"+
-	         grades[2].getScore() + grades[2].getGrade() +"\n"+
-	         grades[3].getScore() + grades[3].getGrade() +"\n";
-	}
-}
-	*/
+   /**
+      The setEssay method stores an Essay object
+      for the essay grade.
+      @param anEsay Represents the essay grade.
+   */
+      
+   public void setEssay(Essay anEssay)
+   {
+      grades[2] = anEssay;
+   }
 
+   /**
+      The setFinalExam method stores a FinalExam object
+      for the final exam grade.
+      @param aFinalExam Represents the final exam grade.
+   */
+   
+   public void setFinalExam(FinalExam aFinalExam)
+   {
+      grades[3] = aFinalExam;
+   }
+
+   /**
+      The toString method returns a string representation
+      of the object.
+      @return A string representation of the object.
+   */
+   
+   public String toString()
+   {
+      String str = "Lab Score: " + grades[0].getScore() +
+                   "\tGrade: " + grades[0].getGrade() +
+                   "\nPass/Fail Exam Score: " + grades[1].getScore() +
+                   "\tGrade: " + grades[1].getGrade() +
+                   "\nEssay Score: " + grades[2].getScore() +
+                   "\tGrade: " + grades[2].getGrade() +
+                   "\nFinal Exam Score: " + grades[3].getScore() +
+                   "\tGrade: " + grades[3].getGrade();
+      
+      return str;
+   }
 }

@@ -1,6 +1,7 @@
-
 /**
-   A class that holds a grade for a graded activity.
+   The GradedActivity class stores data about a graded 
+   activity for the Analyzable Interface programming 
+   challenge.
 */
 
 public class GradedActivity
@@ -12,13 +13,6 @@ public class GradedActivity
       @param s The value to store in score.
    */
 
-   public GradedActivity(){
-	   score = 77.3;
-   }
-   public GradedActivity(double s){
-	   score = s;
-   }
-   
    public void setScore(double s)
    {
       score = s;

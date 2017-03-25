@@ -1,8 +1,7 @@
-
-
 /**
-   This class holds a numeric score and determines
-   whether the score is passing or failing.
+   The PassFailActivity class stores data about a graded 
+   activity that has a passing or failing grade for the 
+   Analyzable Interface programming challenge.
 */
 
 public class PassFailActivity extends GradedActivity
@@ -20,9 +19,9 @@ public class PassFailActivity extends GradedActivity
    }
 
    /**
-      The getGrade method returns a letter grade determined
-      from the score field. This method overrides the
-      superclass method.
+      The getGrade method returns a letter grade
+      determined from the score field. This
+      method overrides the superclass method.
       @return The letter grade.
    */
 

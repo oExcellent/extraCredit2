@@ -1,7 +1,7 @@
-
 /**
-   This class determines a passing or failing grade for
-   an exam.
+   The PassFailExam class stores data about a graded 
+   activity that is an exam and has a passing or failing 
+   grade for the Course Grades programming challenge.
 */
 
 public class PassFailExam extends PassFailActivity
@@ -20,7 +20,7 @@ public class PassFailExam extends PassFailActivity
    */
 
    public PassFailExam(int questions, int missed, 
-                       double minPassing)
+               double minPassing)
    {
       // Call the superclass constructor.
       super(minPassing);

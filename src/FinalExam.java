@@ -1,7 +1,7 @@
-
-
 /**
-   This class determines the grade for a final exam.
+   The Essay class stores data about a graded 
+   activity that is a final exam for the 
+   Analyzable Interface programming challenge.
 */
 
 public class FinalExam extends GradedActivity
